@@ -6,3 +6,6 @@
 * Set the contents: menuObject.setContents(ItemStack[]);
 * Set the buttons: menuObject.setButtons(ItemStack exitButton, ItemStack backButton, ItemStack nextButton);
 * Open the Menu by using the MenuManager: player.openInventory(new MenuManager().getMenu("MenuName"));
+
+**Download**
+* Mediafire link: http://www.mediafire.com/download/idp2evik4bq6nis/MenuLibrary.jar
