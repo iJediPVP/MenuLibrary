@@ -95,28 +95,8 @@ public class Menu {
 
         }
 
-        /*
-        If an inventory with this name already exists, update the Menu for all current viewers.
-        Set their view to the first page.
-        */
-        MenuManager mm = new MenuManager();
-        if(mm.menuExists(menuName)){
-            Menu menu = mm.getMenuByName(menuName);
-            List<Player> viewerList = new ArrayList<>();
-            for(Inventory page : menu.getPages()){
-                for(HumanEntity humanEntity : page.getViewers()){
-                    if(humanEntity instanceof Player){
-                        viewerList.add((Player) humanEntity);
-                    }
-                }
-            }
-            for(Player player : viewerList){
-                player.openInventory(menu.getFirstPage());
-            }
-        }
-
         //Add to MenuManager
-        mm.addMenu(this);
+        new MenuManager().addMenu(this);
 
     }
     //Keep slot aligned

@@ -3,6 +3,7 @@ package me.ijedi.menulibrary;
 import org.bukkit.inventory.Inventory;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class MenuManager {
 
@@ -28,6 +29,16 @@ public class MenuManager {
         }else{
             throw new NullPointerException("A Menu object with the name " + name + " does not exist.");
         }
+    }
+
+    //Get Menu pages
+    public List<Inventory> getMenuPageList(String name) throws NullPointerException{
+        if(menuMap.containsKey(name)){
+            return menuMap.get(name).getPages();
+        }else{
+            throw new NullPointerException("A Menu object with the name " + name + " does not exist.");
+        }
+
     }
 
     //Get menu by name
