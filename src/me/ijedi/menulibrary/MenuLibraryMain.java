@@ -2,7 +2,7 @@ package me.ijedi.menulibrary;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends JavaPlugin {
+public class MenuLibraryMain extends JavaPlugin {
 
     //Enabled
     @Override
@@ -12,5 +12,12 @@ public class Main extends JavaPlugin {
 
         //Log
         this.getLogger().info("MenuLibrary has been enabled!");
+    }
+
+    //Disabled
+    @Override
+    public void onDisable(){
+        //Log
+        this.getLogger().info("MenuLibrary has been disabled!");
     }
 }
